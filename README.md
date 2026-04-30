@@ -40,6 +40,27 @@ Built with a strong backbone agent, SkillX produces a transferable skill library
 
 ---
 
+## Data Formats
+
+### Trajectory Input (JSONL)
+
+SkillX expects trajectories in the following schema:
+
+```json
+{
+  "trajectory_id": "traj_001",
+  "task_id": "task_001",
+  "user_task": "How many songs are in my Spotify library?",
+  "task_history": [
+    {"role": "system", "content": "You are a helpful assistant..."},
+    {"role": "assistant", "content": "I'll help you count..."},
+    {"role": "user", "content": "Output:\n```\n{\"songs\": 150}\n```"}
+  ],
+  "reward": 1.0,
+  "metadata": {}
+}
+```
+
 ## 🤖 Key Features
 
 ### Hierarchical Multi-Level Skill Design
